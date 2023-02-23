@@ -1,11 +1,13 @@
 ﻿#include <iostream>
+
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
+int main() {
+    string phrase = "Kraj lukomor’a dub zelenyj,\n"
+        "I zolotyj lancyuh na nim:\n"
+        "Shodnya, shonochi kit uchenyj\n"
+        "Na lancyuhu kruzhl’aje tim";
+
+    cout << phrase << endl << "\a\a\a";
 	return 0;
 }
