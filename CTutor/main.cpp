@@ -1,11 +1,15 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    double radius, volume;
+    const double rad = 3.14159;
+
+    cout << "radius -> ";
+    cin >> radius;
+
+    volume = (4.0 / 3.0) * rad * radius * radius * radius;
+    cout << "volume a sphere radius" << radius << " equal " << volume << endl;
+
+    return 0;
 }
