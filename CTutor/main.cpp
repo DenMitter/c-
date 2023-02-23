@@ -1,11 +1,17 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    double scale, distance_cm, distance_km;
+
+    cout << "enter map (sm) -> ";
+    cin >> scale;
+
+    cout << "distance between points (sm) -> ";
+    cin >> distance_cm;
+
+    distance_km = distance_cm / (100000.0 / scale);
+    cout << "distance between settlements : " << distance_km << " km" << endl;
+
+    return 0;
 }
