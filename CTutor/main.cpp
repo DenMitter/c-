@@ -2,10 +2,11 @@
 using namespace std;
 
 int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
+	cout << "\tTo be, or not to be: that is the question:\n\
+	Whether 'tis nobler in the mind to suffer\n\
+	The slings and arrows of outrageous fortune,\n\
+	Or to take arms against a sea of troubles,\n\
+	And by opposing end them ?\n\
+	William Shakespeare";
 	return 0;
 }
