@@ -1,11 +1,23 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    double length, width, height, volume;
+
+    // Запитати користувача ввести довжину, ширину та висоту
+    cout << "enter -> :\n";
+    cout << "length (sm) -> ";
+    cin >> length;
+    cout << "width (sm) -> ";
+    cin >> width;
+    cout << "height (sm) -> ";
+    cin >> height;
+
+    // Обчислити об'єм паралелепіпеда
+    volume = length * width * height;
+
+    // Вивести результат на екран
+    cout << "result: " << volume << " cub. sm.\n";
+
+    return 0;
 }
