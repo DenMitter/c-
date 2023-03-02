@@ -1,11 +1,25 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    setlocale(LC_ALL, "Ukrainian");
+    int start, end;
+
+    cout << "start -> ";
+    cin >> start;
+    cout << "end -> ";
+    cin >> end;
+
+    for (int i = start; i < end; i++) {
+        if (i % 2 == 0) {
+            cout << i << "\t—\tПарне\n";
+        }
+        else if (i % 2 != 0 && i != 7) {
+            cout << i << "\t—\tНе парне\n";
+        }
+        else if (i % 7 == 0) {
+            cout << i << "\t—\tКратне 7-ми\n";
+        }
+    }
+    return 0;
 }
