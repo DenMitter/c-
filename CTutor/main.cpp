@@ -4,12 +4,20 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Ukrainian");
-    int option;
-    cout << "Введіть номер варіанту: ";
-    cin >> option;
+    int num, sum = 1;
+    cout << "num -> ";
+    cin >> num;
 
-    for (int i = 1; i <= 10; i++) {
-        cout << option << " * " << i << " = " << option * i << endl;
+    if (num >= 20) {
+        cout << "Введіть число менше за 20";
     }
+
+    while (num < 20) {
+        sum = sum * num;
+        num++;
+    }
+
+    cout << "Добуток чисел до "
+        << "20" << " = " << sum << endl;
     return 0;
 }
