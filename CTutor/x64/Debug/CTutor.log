@@ -1,2 +1,6 @@
 ﻿  main.cpp
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(5,13): warning C4566: character represented by universal-character-name '\u01AA' cannot be represented in the current code page (1251)
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(5,13): warning C4566: character represented by universal-character-name '\u02D8' cannot be represented in the current code page (1251)
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(5,13): warning C4566: character represented by universal-character-name '\u2323' cannot be represented in the current code page (1251)
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(5,13): warning C4566: character represented by universal-character-name '\u0283' cannot be represented in the current code page (1251)
   CTutor.vcxproj -> C:\Users\Home\source\repos\CTutor\x64\Debug\CTutor.exe
