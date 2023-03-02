@@ -1,2 +1,3 @@
 ﻿  main.cpp
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(7,9): warning C4101: 'n': unreferenced local variable
   CTutor.vcxproj -> C:\Users\Home\source\repos\CTutor\x64\Debug\CTutor.exe
