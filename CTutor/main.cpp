@@ -4,18 +4,17 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Ukrainian");
     int numOne, numTwo, result;
-    cout << "one -> ";
+    cout << "num one -> ";
     cin >> numOne;
-    cout << "two -> ";
+    cout << "num two -> ";
     cin >> numTwo;
 
-    if (numOne > numTwo) {
-        result = numTwo;
-    }
-    else {
+    if (numOne < numTwo) {
         result = numOne;
     }
-
-    cout << endl << result;
+    else {
+        result = numTwo;
+    }
+    cout << result;
     return 0;
 }
