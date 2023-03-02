@@ -1,11 +1,15 @@
 ﻿#include <iostream>
+#include <cmath>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    setlocale(LC_ALL, "Ukrainian");
+    int option;
+    cout << "Введіть номер варіанту: ";
+    cin >> option;
+
+    for (int i = 1; i <= 10; i++) {
+        cout << option << " * " << i << " = " << option * i << endl;
+    }
+    return 0;
 }
