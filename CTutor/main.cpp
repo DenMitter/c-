@@ -1,11 +1,21 @@
 ﻿#include <iostream>
+#include <cmath>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    setlocale(LC_ALL, "Ukrainian");
+    int n[7];
+    int max = 0;
+
+    cout << "введіть числа: \n";
+    for (int i = 0; i < 7; i++) {
+        cin >> n[i];
+    }
+    for (int j = 0; j < 7; j++) {
+        if (n[j] > max)
+            max = n[j];
+    }
+
+    cout << "максимальне число: " << max << endl;
+    return 0;
 }
