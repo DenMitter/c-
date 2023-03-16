@@ -1,11 +1,19 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+void function(int numOne, int numTwo) {
+    if (numOne > numTwo) {
+        cout << numOne;
+    }
+    else if (numOne < numTwo) {
+        cout << numTwo;
+    }
+    else {
+        cout << "error";
+    }
+}
+
+int main() {
+    function(5, 7);
+    return 0;
 }
