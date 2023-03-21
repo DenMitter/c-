@@ -1,11 +1,20 @@
 ﻿#include <iostream>
+
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+void average(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    cout << "Average: " << (double)sum / size << endl;
+}
+
+
+int main() {
+    int arr[] = { 1, 2, 3, 4, 5 };
+    int size = 5;
+    average(arr, size);
+
+    return 0;
 }
