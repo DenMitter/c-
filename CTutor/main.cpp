@@ -1,11 +1,30 @@
 ﻿#include <iostream>
+
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+void count(int arr[], int size) {
+    int positive = 0, negative = 0, zero = 0;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] > 0) {
+            positive++;
+        }
+        else if (arr[i] < 0) {
+            negative++;
+        }
+        else {
+            zero++;
+        }
+    }
+    cout << "Positive: " << positive << endl;
+    cout << "Negative: " << negative << endl;
+    cout << "Zero: " << zero << endl;
+}
+
+
+int main() {
+    int arr[] = { -1, 0, 2, 4, -3, 0 };
+    int size = 6;
+    count(arr, size);
+
+    return 0;
 }
