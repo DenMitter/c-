@@ -1,0 +1,13 @@
+﻿  main.cpp
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(57,5): error C2562: 'matrice_max': 'void' function returning a value
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(46,6): message : see declaration of 'matrice_max'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(70,5): error C2562: 'matrice_max': 'void' function returning a value
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(59,6): message : see declaration of 'matrice_max'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(83,5): error C2562: 'matrice_max': 'void' function returning a value
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(72,6): message : see declaration of 'matrice_max'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(97,5): error C2562: 'matrice_min': 'void' function returning a value
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(86,6): message : see declaration of 'matrice_min'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(110,5): error C2562: 'matrice_min': 'void' function returning a value
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(99,6): message : see declaration of 'matrice_min'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(123,5): error C2562: 'matrice_min': 'void' function returning a value
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(112,6): message : see declaration of 'matrice_min'
