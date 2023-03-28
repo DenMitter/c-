@@ -1,11 +1,17 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int function(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    else {
+        return n * function(n - 1);
+    }
+}
+
+
+int main() {
+    cout << function(5);
+    return 0;
 }
