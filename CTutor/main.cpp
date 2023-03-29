@@ -1,11 +1,26 @@
 ﻿#include <iostream>
+#include <cmath>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int len(int a) {
+    if (a == 0) {
+        return 0;
+    }
+    else {
+        return 1 + len(a / 10);
+    }
+}
+
+int sumDigits(int n) {
+    if (n < 10) {
+        return n;
+    }
+    else {
+        return n % 10 + sumDigits(n / 10);
+    }
+}
+
+
+int main() {
+    cout << sumDigits(12);
 }
