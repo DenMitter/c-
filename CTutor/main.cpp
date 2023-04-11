@@ -1,11 +1,20 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+void multiplication(int num, int multiplier) {
+    cout << num << " x " << multiplier << " = " << num * multiplier << endl;
+}
+
+void printMultiplicationTable(int num, void (*multiplyFunc)(int, int)) {
+    for (int i = 1; i <= 10; i++) {
+        multiplyFunc(num, i);
+    }
+}
+
+int main() {
+    int num;
+    cin >> num;
+
+    printMultiplicationTable(num, multiplication);
+    return 0;
 }
