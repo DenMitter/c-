@@ -1,11 +1,17 @@
 ﻿#include <iostream>
+#include <string>
+
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    string str = "string and string";
+
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] == ' ') {
+            str.replace(i, 1, "\t");
+        }
+    }
+
+    cout << str << endl;
+    return 0;
 }
