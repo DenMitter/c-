@@ -1,11 +1,35 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    int one, two;
+    char op;
+    int result;
+
+    cout << "enter an expression -> ";
+    cin >> one >> op >> two;
+
+    int* ptr_a = &one;
+    int* ptr_b = &two;
+
+    switch (op) {
+    case '+':
+        result = *ptr_a + *ptr_b;
+        break;
+    case '-':
+        result = *ptr_a - *ptr_b;
+        break;
+    case '*':
+        result = *ptr_a * *ptr_b;
+        break;
+    case '/':
+        result = *ptr_a / *ptr_b;
+        break;
+    default:
+        cout << "invalid operator" << endl;
+        return 1;
+    }
+
+    cout << "result -> " << result << endl;
+    return 0;
 }
