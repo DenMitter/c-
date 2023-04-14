@@ -1,11 +1,17 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    int num = 3, num_ = 7;
+
+    int* ptr_num = &num;
+    int* ptr_num_ = &num_;
+
+    int temp = *ptr_num;
+    *ptr_num = *ptr_num_;
+    *ptr_num_ = temp;
+
+    cout << "one " << num << " two " << num_ << endl;
+
+    return 0;
 }
