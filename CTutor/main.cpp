@@ -1,11 +1,18 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    const int SIZE = 5;
+    int arr[SIZE] = { 1, 2, 3, 4, 5 };
+    int sum = 0;
+
+    int* ptr = arr;
+
+    for (int i = 0; i < SIZE; i++) {
+        sum += *ptr;
+        ptr++;
+    }
+
+    cout << "sum elements in array -> " << sum << endl;
+    return 0;
 }
