@@ -1,11 +1,21 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    int num;
+    cout << "enter your number -> ";
+    cin >> num;
+    int* ptr_num = &num;
+
+    if (*ptr_num > 0) {
+        cout << "number is positive" << endl;
+    }
+    else if (*ptr_num < 0) {
+        cout << "number is negative" << endl;
+    }
+    else {
+        cout << "number is zero" << endl;
+    }
+
+    return 0;
 }
