@@ -1,0 +1,7 @@
+﻿cl : command line  warning D9002: ignoring unknown option '-std=c99'
+  main.cpp
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(30,15): error C2440: 'initializing': cannot convert from 'void *' to 'char *'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(30,15): message : Conversion from 'void*' to pointer to non-'void' requires an explicit cast
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(54,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(55,18): error C2440: 'initializing': cannot convert from 'void *' to 'char *'
+C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(55,18): message : Conversion from 'void*' to pointer to non-'void' requires an explicit cast
