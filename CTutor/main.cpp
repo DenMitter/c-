@@ -2,43 +2,64 @@
 #include <string>
 using namespace std;
 
-struct WashingMachine {
+struct Iron {
+private:
     string brand;
+    string model;
     string color;
-    float width;
-    float length;
-    float height;
-    int power;
-    int spin_speed;
-    int temperature;
+    float min_temp;
+    float max_temp;
+    bool steam;
+    float power;
 
-    WashingMachine(string brand, string color, float width, float length, float height, int power, int spin_speed, int temperature) {
+public:
+    Iron(string brand, string model, string color, float min_temp, float max_temp, bool steam, float power) {
         this->brand = brand;
+        this->model = model;
         this->color = color;
-        this->width = width;
-        this->length = length;
-        this->height = height;
+        this->min_temp = min_temp;
+        this->max_temp = max_temp;
+        this->steam = steam;
         this->power = power;
-        this->spin_speed = spin_speed;
-        this->temperature = temperature;
 
         cout << endl << "Create washing (argument)" << endl;
     }
-    ~WashingMachine() {
+    ~Iron() {
         cout << endl << "Destroy washing";
+    }
+
+    void get_brand() const {
+        cout << endl << this->brand;
+    }
+    void get_model() const {
+        cout << endl << this->model;
+    }
+    void get_color() const {
+        cout << endl << this->color;
+    }
+    void get_min_temp() const {
+        cout << endl << this->min_temp;
+    }
+    void get_max_temp() const {
+        cout << endl << this->max_temp;
+    }
+    void get_steam() const {
+        cout << endl << this->steam;
+    }
+    void get_power() const {
+        cout << endl << this->power;
     }
 };
 
 int main() {
-    WashingMachine washing_machine("Samsung", "White", 65.0, 65.0, 75.0, 1100, 3000, 41);
+    Iron iron("Samsung", "Super-puper", "Purple", 5, 35, true, 35);
 
-    cout << endl << "My washing machine:" << endl;
-    cout << "Brand: " << washing_machine.brand << endl;
-    cout << "Color: " << washing_machine.color << endl;
-    cout << "Dimensions: " << washing_machine.width << "x" << washing_machine.length << "x" << washing_machine.height << " cm" << endl;
-    cout << "Power: " << washing_machine.power << " W" << endl;
-    cout << "Spin speed: " << washing_machine.spin_speed << " rpm" << endl;
-    cout << "Temperature: " << washing_machine.temperature << " C" << endl;
-
+    iron.get_brand();
+    iron.get_model();
+    iron.get_color();
+    iron.get_min_temp();
+    iron.get_max_temp();
+    iron.get_steam();
+    iron.get_power();
     return 0;
 }
