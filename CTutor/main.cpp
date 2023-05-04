@@ -1,8 +1,7 @@
-﻿// Я надіюсь ви не забули аудіо файл закинути на робочий стіл. І нажаль по другому не виходить запустити аудіо, тільки через відкриття якогось mp3 програвача
-
+﻿#include <windows.h>
 #include <iostream>
-#include <string>
-#include <Windows.h>
+
+#pragma comment(lib, "winmm.lib")
 using namespace std;
 
 struct Animal {
@@ -44,26 +43,24 @@ public:
     }
 
     void vote() {
-        HINSTANCE result;
-        result = ShellExecute(NULL, NULL, L"C:/Users/Home/Desktop/57647-napadenie-na-belarus.mp3", NULL, NULL, SW_SHOWDEFAULT);// Home замінити на свого користувача
-        if ((int)result <= 32) {
-            cout << "Error\nReturn value: " << (int)result << endl;
-        }
+        //PlaySound(L"57647-napadenie-na-belarus.wav", NULL, SND_FILENAME);
+        PlaySound(L"dog.wav", NULL, SND_FILENAME);
     }
 };
 
 int main() {
-    int punkt = 0;
+    int punkt = 1;
     Animal animal("bel", "undefined", "bulba");
 
     animal.get_name();
     animal.get__class();
     animal.get_alias();
+    
+    while (punkt != 0) {
+        cout << endl << "Vote - input \"1\"\t";
+        cin >> punkt;
 
-    cout << "Vote in bulba - input \"1\"\t";
-    cin >> punkt;
-
-    if (punkt == 1) { animal.vote(); }
-    else { cout << "Error"; }
+        if(punkt == 1) animal.vote();
+    }
     return 0;
 }

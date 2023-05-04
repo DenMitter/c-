@@ -1,12 +1,7 @@
-﻿cl : command line  warning D9002: ignoring unknown option '-std=c99'
-  main.cpp
-C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(49,1): warning C4311: 'type cast': pointer truncation from 'HINSTANCE' to 'int'
-C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(49,1): warning C4302: 'type cast': truncation from 'HINSTANCE' to 'int'
-C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(50,1): warning C4311: 'type cast': pointer truncation from 'HINSTANCE' to 'int'
-C:\Users\Home\source\repos\CTutor\CTutor\main.cpp(50,1): warning C4302: 'type cast': truncation from 'HINSTANCE' to 'int'
-  Generating code
-  0 of 93 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+﻿  main.cpp
+  Создание кода
+  1 of 93 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
+  Создание кода завершено
   CTutor.vcxproj -> C:\Users\Home\source\repos\CTutor\x64\Release\CTutor.exe
