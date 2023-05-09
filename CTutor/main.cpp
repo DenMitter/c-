@@ -1,11 +1,32 @@
 ﻿#include <iostream>
+#include <fstream>
+#include <string>
+
 using namespace std;
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
-	return 0;
+int main() {
+    fstream input_file("input.txt", ios::in);
+    fstream output_file("output.txt", ios::out);
+
+    if (!input_file.is_open()) {
+        cout << "Error opening input file" << endl;
+        return 1;
+    }
+
+    if (!output_file.is_open()) {
+        cout << "Error opening output file" << endl;
+        return 1;
+    }
+
+    string word;
+    while (input_file >> word) {
+        if (word.length() >= 7) {
+            output_file << word << " ";
+        }
+    }
+
+    input_file.close();
+    output_file.close();
+
+    return 0;
 }
