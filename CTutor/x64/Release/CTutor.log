@@ -1,7 +1,7 @@
 ﻿  main.cpp
   Создание кода
-  114 of 156 functions (73.1%) were compiled, the rest were copied from previous compilation.
-    49 functions were new in current compilation
-    7 functions had inline decision re-evaluated but remain unchanged
+  28 of 150 functions (18.7%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    23 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   CTutor.vcxproj -> C:\Users\Home\source\repos\CTutor\x64\Release\CTutor.exe

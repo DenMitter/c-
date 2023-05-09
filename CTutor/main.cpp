@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -19,10 +20,21 @@ int main() {
     }
 
     string word;
-    while (input_file >> word) {
-        if (word.length() >= 7) {
-            output_file << word << " ";
+    char c;
+    while (input_file.get(c)) {
+        if (isalpha(c)) {
+            word.push_back(c);
         }
+        else if (!word.empty()) {
+            if (word.length() >= 7) {
+                output_file << word << " ";
+            }
+            word.clear();
+        }
+    }
+
+    if (!word.empty() && word.length() >= 7) {
+        output_file << word << " ";
     }
 
     input_file.close();
