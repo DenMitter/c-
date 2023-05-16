@@ -28,9 +28,6 @@ struct Employees
 		cout << "Name: " << name << endl; 
 		cout << "Surname: " << surname << endl;
 		cout << "Age: " << age << endl;
-	} 
-	void showAllEmployees() {
-		
 	}
 }; 
 
@@ -88,6 +85,88 @@ struct file_process{
 	} 
 }; 
 
+void addEmployeess(int size_of_Employeess, Employees* obj)
+{
+	for (int i = 0; i < size_of_Employeess; i++)
+	{
+		string name, surname;
+		int age;
+		cout << "Enter name: ";
+		cin >> name;
+		cout << "Enter surname: ";
+		cin >> surname;
+		cout << "Enter age: ";
+		cin >> age;
+		obj[i] = Employees(name, surname, age);
+	}
+}
+void removeEmployees(int size_of_Employeess, Employees* obj)
+{
+	string surname;
+	cout << "Enter the surname of the employee to remove: ";
+	cin >> surname;
+	bool employeeRemoved = false;
+	for (int i = 0; i < size_of_Employeess; i++)
+	{
+		if (obj[i].surname == surname)
+		{
+			obj[i] = Employees();
+			employeeRemoved = true;
+		}
+	}
+}
+void showAllEmployees(int size_of_Employeess, Employees* obj)
+{
+	for (int i = 0; i < size_of_Employeess; i++)
+	{
+		if (obj[i].name != "NULL")
+		{
+			obj[i].about();
+		}
+	}
+}
+void searchEmployeesBySurname(int size_of_Employeess, Employees* obj)
+{
+	string surname;
+	cout << "Enter the surname to search for: ";
+	cin >> surname;
+	bool employeeFound = false;
+	for (int i = 0; i < size_of_Employeess; i++)
+	{
+		if (obj[i].surname == surname)
+		{
+			obj[i].about();
+			employeeFound = true;
+		}
+	}
+
+	if (!employeeFound)
+	{
+		cout << "Employee not found.\n";
+	}
+}
+void searchEmployeesByAge(int size_of_Employeess, Employees* obj)
+{
+	int age;
+	cout << "Enter the age to search for: ";
+	cin >> age;
+	bool employeeFound = false;
+	for (int i = 0; i < size_of_Employeess; i++)
+	{
+		if (obj[i].age == age)
+		{
+			obj[i].about();
+			employeeFound = true;
+		}
+	}
+
+	if (!employeeFound)
+	{
+		cout << "Employee not found.\n";
+	}
+}
+
+
 int main() { 
 	int size_of_Employeess = 5; 
 	int menu;
@@ -112,118 +191,27 @@ int main() {
 		switch (menu) {
 			case 1:
 			{
-				for (int i = 0; i < size_of_Employeess; i++) {
-					string name, surname;
-					int age;
-					cout << "~~~~~~~~~~~~~ Employees #" << i + 1 << " ~~~~~~~~~~~~~\n";
-					cout << "enter the name of the employee -> ";
-					cin >> name;
-					cout << "enter the surname of the employee -> ";
-					cin >> surname;
-					cout << "enter the age of the employee -> ";
-					cin >> age;
-
-					int emptySlotIndex = -1;
-					for (int i = 0; i < size_of_Employeess; i++)
-					{
-						if (obj1[i].name == "NULL")
-						{
-							emptySlotIndex = i;
-							break;
-						}
-					}
-
-					if (emptySlotIndex != -1)
-					{
-						obj1[emptySlotIndex] = Employees(name, surname, age);
-						cout << "employee added successfully.\n\n";
-					}
-					else
-					{
-						cout << "no empty slot available to add the employee.\n";
-					}
-				}
+				addEmployeess(size_of_Employeess, obj1);
 				break;
 			}
 			case 2:
 			{
-				string surname;
-				cout << "Enter the surname of the employee to remove: ";
-				cin >> surname;
-
-				bool employeeRemoved = false;
-				for (int i = 0; i < size_of_Employeess; i++)
-				{
-					if (obj1[i].surname == surname)
-					{
-						obj1[i] = Employees();
-						employeeRemoved = true;
-					}
-				}
-
-				if (employeeRemoved)
-				{
-					cout << "Employee removed successfully.\n";
-				}
-				else
-				{
-					cout << "Employee not found.\n";
-				}
+				removeEmployees(size_of_Employeess, obj1);
 				break;
 			}
 			case 3:
 			{
-				for (int i = 0; i < size_of_Employeess; i++)
-				{
-					if (obj1[i].name != "NULL")
-					{
-						obj1[i].about();
-					}
-				}
+				showAllEmployees(size_of_Employeess, obj1);
 				break;
 			}
 			case 4:
 			{
-				string surname;
-				cout << "Enter the surname to search for: ";
-				cin >> surname;
-
-				bool employeeFound = false;
-				for (int i = 0; i < size_of_Employeess; i++)
-				{
-					if (obj1[i].surname == surname)
-					{
-						obj1[i].about();
-						employeeFound = true;
-					}
-				}
-
-				if (!employeeFound)
-				{
-					cout << "Employee not found.\n";
-				}
+				searchEmployeesBySurname(size_of_Employeess, obj1);
 				break;
 			}
 			case 5:
 			{
-				int age;
-				cout << "Enter the age to search for: ";
-				cin >> age;
-
-				bool employeeFound = false;
-				for (int i = 0; i < size_of_Employeess; i++)
-				{
-					if (obj1[i].age == age)
-					{
-						obj1[i].about();
-						employeeFound = true;
-					}
-				}
-
-				if (!employeeFound)
-				{
-					cout << "Employee not found.\n";
-				}
+				searchEmployeesByAge(size_of_Employeess, obj1);
 				break;
 			}
 			case 6:
