@@ -1,11 +1,26 @@
 ﻿#include <iostream>
-using namespace std;
+#include "Phone.h"
+#include "MarketPhone.h"
+using namespace std; 
 
-int main(int argc, const char* argv[]) {
-	setlocale(LC_ALL, "Ukrainian");
-	cout << "Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтaрi рани заростуть\n\
-	Давай на чистоту, сядем разом на мосту\n\
-	I побазарим зараз тут хай cтapi рани заростуть";
+
+#if MarkPhone 0
+int main() {
+	MarketPhone marketphone("M", 14000, 2021);
+
+	marketphone.getModel();
+	marketphone.getPrice();
+	marketphone.getYear();
 	return 0;
 }
+
+#else
+int main() {
+	Phone phone("P", 12000, 2021);
+
+	phone.getModel();
+	phone.getPrice();
+	phone.getYear();
+	return 0;
+}
+#endif
